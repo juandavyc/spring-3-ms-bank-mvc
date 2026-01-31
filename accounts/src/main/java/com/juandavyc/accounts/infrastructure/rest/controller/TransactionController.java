@@ -40,7 +40,7 @@ public class TransactionController {
                 .body(response);
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<TransactionRestResponse>> search(){
 
         List<TransactionResponse> transactions = service.search();

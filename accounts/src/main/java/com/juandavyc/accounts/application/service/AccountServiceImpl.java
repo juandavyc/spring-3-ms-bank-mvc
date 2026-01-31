@@ -27,7 +27,7 @@ public class AccountServiceImpl implements AccountUseCase {
         // exists verify
         // throws
         // account. createdAt
-        account.create();
+        account.initialize();
         Account saved = port.save(account);
         return mapper.toResponse(saved);
     }

@@ -21,12 +21,16 @@ public class Account {
     public Account() {
     }
 
-    public void create(){
+    public void initialize() {
 
-       String number =  String.valueOf(ThreadLocalRandom.current().nextLong(1_000_000_000L, 10_000_000_000L));
+        this.number = this.getAccountNumber();
+        this.status = AccountStatus.ACTIVE;
+        this.balance = this.openingBalance;
 
-       setNumber(number);
-       setStatus(AccountStatus.ACTIVE);
+    }
+
+    private String getAccountNumber() {
+        return String.valueOf(ThreadLocalRandom.current().nextLong(1_000_000_000L, 10_000_000_000L));
     }
 
     public UUID getId() {

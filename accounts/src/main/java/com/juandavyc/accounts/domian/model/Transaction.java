@@ -20,19 +20,27 @@ public class Transaction {
     public Transaction() {
     }
 
-    public Transaction(UUID id, UUID accountId, TransactionType type, BigDecimal amount, TransactionStatus status, LocalDateTime timestamp) {
-        this.id = id;
-        this.accountId = accountId;
-        this.type = type;
-        this.amount = amount;
-        this.status = status;
-        this.timestamp = timestamp;
+    public void initialize() {
+        timestamp = LocalDateTime.now();
     }
 
-    public void create(){
-        LocalDateTime now = LocalDateTime.now();
-        setStatus(TransactionStatus.PENDING);
-        setTimestamp(now);
+    public BigDecimal calculateNewBalance(BigDecimal balance) {
+        return this.type == TransactionType.DEPOSIT
+                ? balance.add(amount)
+                : balance.subtract(amount);
+    }
+
+    public void evaluate(BigDecimal newBalance) {
+        if (newBalance.compareTo(BigDecimal.ZERO) < 0) {
+            this.status = TransactionStatus.REJECTED;
+        }
+        else{
+            this.status = TransactionStatus.APPROVED;
+        }
+    }
+
+    public boolean isApproved() {
+        return this.status == TransactionStatus.APPROVED;
     }
 
     public UUID getId() {
