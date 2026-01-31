@@ -25,6 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="accounts" options="-parameters" />
+      <module name="clients" options="-parameters" />
       <module name="core" options="-parameters" />
     </option>
   </component>

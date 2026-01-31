@@ -44,6 +44,7 @@ public class AccountRepositoryAdapter implements AccountPort {
 
     @Override
     public void deleteById(UUID accountId) {
+
         Optional<AccountEntity> optionalAccount = repository.findById(accountId);
         if (optionalAccount.isPresent()) {
             AccountEntity entity = optionalAccount.get();
@@ -51,5 +52,6 @@ public class AccountRepositoryAdapter implements AccountPort {
 
             repository.save(entity);
         }
+
     }
 }

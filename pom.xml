@@ -19,11 +19,8 @@
     <modules>
         <module>core</module>
         <module>accounts</module>
-<!--        <module>orders-service</module>-->
-<!--        <module>products-service</module>-->
-<!--        <module>payments-service</module>-->
-<!--        <module>credit-card-processor-service</module>-->
-    </modules>
+        <module>clients</module>
+ </modules>
 
     <properties>
         <revision>1.0.0</revision>
