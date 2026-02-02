@@ -5,45 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b157e8-0f43-4cf9-ae14-2aebff7e6a24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/AccountSummaryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/AccountTransactionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/ClientResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/ReportResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ReportUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/ClientFeign.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/dto/ClientRestResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/mapper/ClientRestMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/ReportsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/AccountSummaryRestResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/AccountTransactionsRestResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/ReportRestResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/ReportRestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/config/CacheConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/AccountsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/AccountsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/TransactionApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/TransactionApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/TransactionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/AccountUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/AccountUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/TransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/TransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/AccountPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/AccountPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/TransactionPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/TransactionPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/AccountRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/AccountRepositoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/TransactionRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/TransactionRepositoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/TransactionRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/TransactionRestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -167,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769890487931</updated>
       <workItem from="1769890490023" duration="1942000" />
-      <workItem from="1769975900900" duration="21707000" />
+      <workItem from="1769975900900" duration="27083000" />
     </task>
     <servers />
   </component>

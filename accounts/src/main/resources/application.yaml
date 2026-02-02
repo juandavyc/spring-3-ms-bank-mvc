@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: accounts
@@ -22,9 +21,35 @@ spring:
       hibernate:
         format_sql: true
         ddl-auto: none
-#        type:
-#          preferred_enum_jdbc_type: VARCHAR
+  #        type:
+  #          preferred_enum_jdbc_type: VARCHAR
 
+
+  cloud:
+    openfeign:
+      client:
+        config:
+          clients:
+            connectTimeout: 2000
+            readTimeout: 5000
+
+resilience4j:
+  retry:
+    instances:
+      clientServiceRetry:
+        maxAttempts: 3
+        waitDuration: 2s
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+        retry-exceptions:
+          - feign.RetryableException
+          - feign.FeignException.InternalServerError
+          - feign.FeignException.ServiceUnavailable
+          - feign.FeignException.GatewayTimeout
+          - java.io.IOException
+        ignore-exceptions:
+          - feign.FeignException.BadRequest
+          - feign.FeignException.NotFound
 
 clients-service:
   ribbon:

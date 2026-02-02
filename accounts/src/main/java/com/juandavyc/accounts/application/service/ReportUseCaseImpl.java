@@ -37,7 +37,7 @@ public class ReportUseCaseImpl implements ReportUseCase {
     @Override
     public ReportResponse execute(LocalDate startDate, LocalDate endDate, UUID clientId) {
         ReportResponse reportResponse = new ReportResponse();
-        ClientResponse client = clientPort.getClientById(clientId);
+        ClientResponse client = clientPort.getClientByIdForReport(clientId);
 //        if (client == null) {
 //            throw new ClientNotFoundException("Client not found with id: " + clientId);
 //        }
