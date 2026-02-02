@@ -18,16 +18,18 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ClientAdapter implements ClientPort {
 
-
     private final ClientRepository repository;
     private final ClientPersistenceMapper mapper;
-    //@Cacheable(value = "clients", key = "#client.id")
-    // events kafka
+
     @Override
     public Client save(Client client) {
-
         ClientEntity entity = mapper.toEntity(client);
         ClientEntity saved = repository.save(entity);
+
+//        if (port.existsByEmail(command.getEmail())) {
+//            throw new EmailAlreadyExistsException(command.getEmail());
+//        }
+
         return mapper.toDomain(saved);
     }
 
@@ -35,6 +37,29 @@ public class ClientAdapter implements ClientPort {
     public Optional<Client> findById(UUID id) {
         Optional<ClientEntity> entity = repository.findById(id);
         return entity.map(mapper::toDomain);
+    }
+
+    @Override
+    public boolean existByPhoneNumber(String phoneNumber) {
+        return repository.existsByPhoneNumber(phoneNumber);
+    }
+
+    @Override
+    public boolean existByIdentification(String identification) {
+        return repository.existsByIdentification(identification);
+    }
+
+    @Override
+    public boolean existsByPhoneNumberAndIdNot(String phoneNumber, UUID id) {
+        return repository.existsByPhoneNumberAndIdNot(phoneNumber, id);
+    }
+
+
+    @Override
+    public Client update(Client client) {
+        ClientEntity entity = mapper.toEntity(client);
+        ClientEntity saved = repository.save(entity);
+        return mapper.toDomain(saved);
     }
 
     @Override
@@ -50,11 +75,7 @@ public class ClientAdapter implements ClientPort {
     @Override
     public void deleteById(UUID id) {
         Optional<ClientEntity> optionalAccount = repository.findById(id);
-        if (optionalAccount.isPresent()) {
-            ClientEntity entity = optionalAccount.get();
-            entity.setStatus(ClientStatus.INACTIVE);
-            repository.save(entity);
-        }
+        optionalAccount.ifPresent(repository::save);
     }
 
 }

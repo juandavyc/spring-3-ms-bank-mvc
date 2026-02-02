@@ -12,6 +12,8 @@ public interface ClientUseCase {
 
     ClientResponse findById(UUID id);
 
+    ClientResponse update(UUID id, ClientCommand command);
+
     List<ClientResponse> findAll();
 
     void deleteById(UUID id);

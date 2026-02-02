@@ -5,12 +5,12 @@ import com.juandayvc.clients.domain.model.enums.GenderType;
 
 public abstract class Person {
 
-    protected final String fullName;
-    protected final GenderType gender;
-    protected final Integer age;
-    protected final String identification;
-    protected final String address;
-    protected final String phoneNumber;
+    protected String fullName;
+    protected GenderType gender;
+    protected Integer age;
+    protected String identification;
+    protected String address;
+    protected String phoneNumber;
 
     protected Person(
             String fullName,
@@ -56,4 +56,27 @@ public abstract class Person {
     }
 
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setGender(GenderType gender) {
+        this.gender = gender;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }

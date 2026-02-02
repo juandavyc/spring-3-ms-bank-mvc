@@ -3,6 +3,7 @@ package com.juandayvc.clients.application.mapper;
 import com.juandayvc.clients.application.dto.ClientCommand;
 import com.juandayvc.clients.domain.model.Client;
 import org.mapstruct.Mapper;
+import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.mapstruct.ReportingPolicy;
 
@@ -13,6 +14,6 @@ import org.mapstruct.ReportingPolicy;
 )
 public interface ClientApplicationUpdateMapper {
 
-    Client toDomain(ClientCommand command);
+    void updateFromCommand(ClientCommand command, @MappingTarget Client client);
 
 }

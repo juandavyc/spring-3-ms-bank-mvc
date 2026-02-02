@@ -12,4 +12,5 @@ public interface ClientApplicationMapper {
 
     ClientResponse toResponse(Client client);
 
+
 }

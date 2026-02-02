@@ -55,4 +55,5 @@ public class ClientFeignAdapter implements ClientPort {
         client.setFullName("-- --");
         return client;
     }
+
 }

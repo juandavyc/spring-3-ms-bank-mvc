@@ -5,14 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b157e8-0f43-4cf9-ae14-2aebff7e6a24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/config/CacheConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/mapper/ClientApplicationUpdateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/usecases/PasswordHasher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/config/PasswordConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/security/BCryptPasswordHasher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/response/ErrorResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/response/ResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/exceptions/IdentificationAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/exceptions/PhoneNumberAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/mapper/ResponseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/shared/ClientResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/shared/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/validation/ValidationGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/AccountsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/AccountsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/mapper/ClientApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/mapper/ClientApplicationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/service/ClientUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/service/ClientUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/usecases/ClientUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/usecases/ClientUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/port/ClientPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/port/ClientPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/adapter/ClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/adapter/ClientAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/entity/PersonEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/entity/PersonEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/dto/ClientRestRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/dto/ClientRestRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/mapper/ClientRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/mapper/ClientRestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +49,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="Exception" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -46,34 +74,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ClientsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AccountsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ClientsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ClientsApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AccountsApplication.executor": "Run",
+    "Spring Boot.ClientsApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.juandavyc.accounts.application.service" />
       <recent name="com.juandavyc.accounts.infrastructure.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.juandavyc.core.exceptions" />
       <recent name="com.juandavyc.accounts.infrastructure.feign.dto" />
     </key>
   </component>
@@ -84,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountsApplication">
+  <component name="RunManager" selected="Spring Boot.ClientsApplication">
     <configuration name="ClientsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.ClientsApplication" />
       <module name="clients" />
@@ -137,6 +166,7 @@
       <updated>1769890487931</updated>
       <workItem from="1769890490023" duration="1942000" />
       <workItem from="1769975900900" duration="27083000" />
+      <workItem from="1770043656082" duration="10997000" />
     </task>
     <servers />
   </component>

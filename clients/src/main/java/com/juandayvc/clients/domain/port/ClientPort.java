@@ -12,6 +12,15 @@ public interface ClientPort {
 
     Optional<Client> findById(UUID id);
 
+    boolean existByPhoneNumber(String phoneNumber);
+
+    boolean existByIdentification(String identification);
+
+    boolean existsByPhoneNumberAndIdNot(String phoneNumber, UUID id);
+
+
+    Client update(Client client);
+
     List<Client> findAll();
 
     void deleteById(UUID id);

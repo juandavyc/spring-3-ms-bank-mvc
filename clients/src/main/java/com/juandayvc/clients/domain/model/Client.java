@@ -29,6 +29,14 @@ public class Client extends Person {
 
     }
 
+    public void deactivate() {
+        this.status = ClientStatus.INACTIVE;
+    }
+
+    public void activate() {
+        this.status = ClientStatus.INACTIVE;
+    }
+
     public UUID getId() {
         return id;
     }
