@@ -24,12 +24,12 @@ public class ClientFeignAdapter implements ClientPort {
     private final ClientFeign feignClient;
     private final ClientRestMapper mapper;
 
-    //@Cacheable(value = "clients", key = "#id")
+    @Cacheable(value = "clients", key = "#id")
     @Retry(name = "clientCriticalRetry", fallbackMethod = "fallbackGetClient")
-    public void getClientById(UUID id) {
+    public ClientResponse getClientById(UUID id) {
         log.info("Getting Feign client by id {}", id);
-        feignClient.getById(id);
-        //mapper.toDomain(client.getData());
+        ResponseDto<ClientRestResponse> client = feignClient.getById(id);
+        return mapper.toDomain(client.getData());
     }
 
     @Cacheable(value = "clients", key = "#id")

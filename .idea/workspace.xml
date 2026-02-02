@@ -5,61 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b157e8-0f43-4cf9-ae14-2aebff7e6a24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/report/ClientSummaryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/report/ReportMetadataResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/report/ReportSummaryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/ClientApplicationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/application/ClientResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/exceptions/AccountTypeAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/exceptions/ClientServiceUnavailableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/shared/AccountResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/shared/TransactionResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/adapter/AccountAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/controller/AccountControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/controller/helper/AccountRequestHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/service/AccountServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/adapter/ClientAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/controller/ClientControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/controller/helper/ClientRequestHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/service/ClientServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/AccountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/account/AccountCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/AccountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/account/AccountResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/AccountSummaryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/report/AccountSummaryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/AccountTransactionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/report/AccountTransactionsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/ClientResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/ReportResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/report/ReportResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/TransactionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/transaction/TransactionCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/TransactionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/transaction/TransactionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/AccountApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/AccountApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/AccountApplicationUpdateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/TransactionApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/mapper/TransactionApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/ReportUseCaseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/service/TransactionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/AccountUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/AccountUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/account/AccountResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/dto/account/AccountResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ClientPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ReportUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/ReportUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/TransactionUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/application/usecases/TransactionUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/AccountPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/AccountPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/TransactionPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/domian/port/TransactionPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/ClientFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/ClientFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/mapper/ClientRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/mapper/ClientRestMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/service/ClientFeignAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/AccountRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/AccountRepositoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/TransactionRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/adapter/TransactionRepositoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/persistence/repository/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/ReportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/ReportsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/AccountRestRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/AccountRestRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/AccountSummaryRestResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/AccountTransactionsRestResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/ReportRestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/ReportRestResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/TransactionRestRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/dto/TransactionRestRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/AccountRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/AccountRestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/ReportRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/ReportRestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/TransactionRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/rest/mapper/TransactionRestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/shared/ClientResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/shared/ClientResponseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/ClientResponseCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/ClientResponseCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/core-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/service/ClientUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/service/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/adapter/ClientAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/adapter/ClientRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/response/ErrorResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/response/ErrorResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/response/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/juandavyc/core/dto/response/ResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/application/ClientResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/response/ErrorResponseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/response/ResponseDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/AccountTypeAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/ClientServiceUnavailableException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/IdentificationAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/PhoneNumberAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/mapper/ResponseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/AccountResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/ClientResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/ResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/TransactionResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/validation/ValidationGroup$OnCreate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/validation/ValidationGroup$OnUpdate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/validation/ValidationGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +55,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,6 +82,35 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ClientsApplication.executor": "Run",
+    "JUnit.AccountAdapterTest.deleteById_ShouldPerformSoftDelete.executor": "Run",
+    "JUnit.AccountAdapterTest.findById_ShouldReturnAccount_WhenActiveAccountExists.executor": "Run",
+    "JUnit.AccountAdapterTest.save_shouldPersistAccount.executor": "Run",
+    "JUnit.AccountControllerTest,shouldPerformFullAccountLifecycle and 1 more.executor": "Run",
+    "JUnit.AccountControllerTest.executor": "Run",
+    "JUnit.AccountControllerTest.shouldCreateAccount.executor": "Run",
+    "JUnit.AccountControllerTest.shouldDeleteAccount.executor": "Run",
+    "JUnit.AccountControllerTest.shouldFindAccountById.executor": "Run",
+    "JUnit.AccountControllerTest.shouldFindAllAccounts.executor": "Run",
+    "JUnit.AccountControllerTest.shouldPerformFullAccountLifecycle.executor": "Run",
+    "JUnit.AccountControllerTest.shouldReturn404DetailedError.executor": "Debug",
+    "JUnit.AccountControllerTest.shouldReturn404WhenAccountNotFound.executor": "Run",
+    "JUnit.AccountServiceTest.create_ShouldCreateAccountSuccessfully.executor": "Run",
+    "JUnit.AccountServiceTest.create_ShouldThrowException_WhenTypeAlreadyExists.executor": "Run",
+    "JUnit.ClientAdapterTest.deleteById_ShouldPerformSoftDelete.executor": "Run",
+    "JUnit.ClientAdapterTest.executor": "Run",
+    "JUnit.ClientAdapterTest.save_shouldPersistClient.executor": "Run",
+    "JUnit.ClientControllerTest.clientLifecycleTest.executor": "Run",
+    "JUnit.ClientControllerTest.executor": "Run",
+    "JUnit.ClientControllerTest.shouldDeleteClientSuccessfully.executor": "Run",
+    "JUnit.ClientControllerTest.shouldFindClientById.executor": "Run",
+    "JUnit.ClientControllerTest.shouldReturn400WhenCreateIsInvalid.executor": "Run",
+    "JUnit.ClientControllerTest.shouldUpdateClient.executor": "Run",
+    "JUnit.ClientServiceTest.create_ShouldCreateClientSuccessfully.executor": "Run",
+    "JUnit.ClientServiceTest.create_ShouldThrowException_WhenIdentificationExists.executor": "Run",
+    "JUnit.ClientServiceTest.deleteById_ShouldDeactivateClientSuccessfully.executor": "Run",
+    "JUnit.ClientServiceTest.deleteById_ShouldThrowException_WhenClientNotFound.executor": "Run",
+    "JUnit.ClientServiceTest.executor": "Run",
+    "JUnit.ClientServiceTest.update_ShouldUpdateClientSuccessfully.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -135,16 +149,82 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountsApplication">
-    <configuration name="ClientsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.ClientsApplication" />
+  <component name="RunManager" selected="JUnit.ClientAdapterTest.deleteById_ShouldPerformSoftDelete">
+    <configuration name="ClientAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="clients" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.juandayvc.clients.*" />
+          <option name="PATTERN" value="com.juandayvc.clients.adapter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.juandayvc.clients.adapter" />
+      <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.adapter.ClientAdapterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientAdapterTest.deleteById_ShouldPerformSoftDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clients" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juandayvc.clients.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.juandayvc.clients.adapter" />
+      <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.adapter.ClientAdapterTest" />
+      <option name="METHOD_NAME" value="deleteById_ShouldPerformSoftDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientAdapterTest.save_shouldPersistClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clients" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juandayvc.clients.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.juandayvc.clients.adapter" />
+      <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.adapter.ClientAdapterTest" />
+      <option name="METHOD_NAME" value="save_shouldPersistClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientControllerTest.shouldDeleteClientSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clients" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juandayvc.clients.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.juandayvc.clients.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.controller.ClientControllerTest" />
+      <option name="METHOD_NAME" value="shouldDeleteClientSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientControllerTest.shouldUpdateClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clients" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.juandayvc.clients.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.juandayvc.clients.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.juandayvc.clients.controller.ClientControllerTest" />
+      <option name="METHOD_NAME" value="shouldUpdateClient" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,7 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientsApplication" />
+        <item itemvalue="JUnit.ClientAdapterTest.deleteById_ShouldPerformSoftDelete" />
+        <item itemvalue="JUnit.ClientAdapterTest" />
+        <item itemvalue="JUnit.ClientAdapterTest.save_shouldPersistClient" />
+        <item itemvalue="JUnit.ClientControllerTest.shouldDeleteClientSuccessfully" />
+        <item itemvalue="JUnit.ClientControllerTest.shouldUpdateClient" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +272,7 @@
       <updated>1769890487931</updated>
       <workItem from="1769890490023" duration="1942000" />
       <workItem from="1769975900900" duration="27083000" />
-      <workItem from="1770043656082" duration="21734000" />
+      <workItem from="1770043656082" duration="31040000" />
     </task>
     <servers />
   </component>

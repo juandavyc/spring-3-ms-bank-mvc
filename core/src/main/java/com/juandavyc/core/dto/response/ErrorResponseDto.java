@@ -1,6 +1,6 @@
 package com.juandavyc.core.dto.response;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.Collections;
 import java.util.Map;
 
@@ -10,14 +10,14 @@ public class ErrorResponseDto {
     private String code;
     private String message;
     private Map<String, String> errors;
-    private LocalDateTime timestamp;
+    private OffsetDateTime timestamp;
 
     public ErrorResponseDto(Integer status, String code, String message) {
         this.status = status;
         this.code = code;
         this.message = message;
         this.errors = Collections.emptyMap();
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = OffsetDateTime.now();
     }
 
     public ErrorResponseDto(Integer status, String code, Map<String, String> errors) {
@@ -25,7 +25,7 @@ public class ErrorResponseDto {
         this.code = code;
         this.message = "Error en la validacion de campos";
         this.errors = errors;
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = OffsetDateTime.now();
     }
 
     public Integer getStatus() {
@@ -61,11 +61,11 @@ public class ErrorResponseDto {
         this.errors = errors;
     }
 
-    public LocalDateTime getTimestamp() {
+    public OffsetDateTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
     }
 }

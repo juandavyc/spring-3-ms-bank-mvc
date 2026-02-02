@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class ClientUseCaseImpl implements ClientUseCase {
+public class ClientServiceImpl implements ClientUseCase {
 
     private final ClientPort port;
     private final ClientApplicationMapper mapper;

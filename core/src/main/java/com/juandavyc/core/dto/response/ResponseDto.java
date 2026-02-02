@@ -1,6 +1,7 @@
 package com.juandavyc.core.dto.response;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 
 public class ResponseDto<T> {
@@ -9,7 +10,7 @@ public class ResponseDto<T> {
     private String status;
     private String message;
     private T data;
-    private LocalDateTime timestamp;
+    private OffsetDateTime timestamp;
 
 
     public ResponseDto(Integer code, String status, String message, T data) {
@@ -17,7 +18,7 @@ public class ResponseDto<T> {
         this.status = status;
         this.message = message;
         this.data = data;
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = OffsetDateTime.now();
 
     }
 
@@ -56,11 +57,11 @@ public class ResponseDto<T> {
         this.data = data;
     }
 
-    public LocalDateTime getTimestamp() {
+    public OffsetDateTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
     }
 }

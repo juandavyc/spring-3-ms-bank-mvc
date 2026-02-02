@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class ClientAdapter implements ClientPort {
+public class ClientRepositoryAdapter implements ClientPort {
 
     private final ClientRepository repository;
     private final ClientPersistenceMapper mapper;
@@ -25,11 +25,6 @@ public class ClientAdapter implements ClientPort {
     public Client save(Client client) {
         ClientEntity entity = mapper.toEntity(client);
         ClientEntity saved = repository.save(entity);
-
-//        if (port.existsByEmail(command.getEmail())) {
-//            throw new EmailAlreadyExistsException(command.getEmail());
-//        }
-
         return mapper.toDomain(saved);
     }
 
@@ -74,8 +69,12 @@ public class ClientAdapter implements ClientPort {
 
     @Override
     public void deleteById(UUID id) {
-        Optional<ClientEntity> optionalAccount = repository.findById(id);
-        optionalAccount.ifPresent(repository::save);
+        Optional<ClientEntity> optionalClient = repository.findById(id);
+        if (optionalClient.isPresent()) {
+            ClientEntity client = optionalClient.get();
+            client.setStatus(ClientStatus.INACTIVE);
+            repository.save(client);
+        }
     }
 
 }
