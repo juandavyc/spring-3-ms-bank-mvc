@@ -1,1 +1,12 @@
+com/juandavyc/core/validation/ValidationGroup$OnUpdate.class
+com/juandavyc/core/dto/response/ResponseDto.class
+com/juandavyc/core/exceptions/PhoneNumberAlreadyExistsException.class
 com/juandavyc/core/dto/Product.class
+com/juandavyc/core/shared/ClientResponseCode.class
+com/juandavyc/core/validation/ValidationGroup.class
+com/juandavyc/core/exceptions/ResourceNotFoundException.class
+com/juandavyc/core/exceptions/IdentificationAlreadyExistsException.class
+com/juandavyc/core/dto/response/ErrorResponseDto.class
+com/juandavyc/core/validation/ValidationGroup$OnCreate.class
+com/juandavyc/core/shared/ResponseCode.class
+com/juandavyc/core/mapper/ResponseMapper.class
