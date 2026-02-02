@@ -19,6 +19,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.6.3/mapstruct-1.6.3.jar" />
         </processorPath>
         <module name="accounts" />
+        <module name="clients" />
       </profile>
     </annotationProcessing>
   </component>

@@ -11,7 +11,7 @@ public interface TransactionUseCase {
     TransactionResponse create(TransactionCommand command);
 
     TransactionResponse searchById(UUID id);
-    TransactionResponse searchByClientId(UUID id);
+    List<TransactionResponse> findByAccountId(UUID id);
 
     List<TransactionResponse> search();
 

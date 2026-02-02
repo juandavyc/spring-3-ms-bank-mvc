@@ -13,6 +13,8 @@ public interface AccountPort {
 
     Optional<Account> findById(UUID id);
 
+    List<Account> findByClientId(UUID id);
+
     List<Account> findAll();
 
     void deleteById(UUID accountId);

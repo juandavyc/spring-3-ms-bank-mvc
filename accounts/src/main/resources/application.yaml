@@ -24,5 +24,11 @@ spring:
         ddl-auto: none
 #        type:
 #          preferred_enum_jdbc_type: VARCHAR
+
+
+clients-service:
+  ribbon:
+    listOfServers: localhost:8082
+
 server:
   port: 8081

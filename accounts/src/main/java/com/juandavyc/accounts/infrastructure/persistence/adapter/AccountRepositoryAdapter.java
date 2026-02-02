@@ -3,6 +3,8 @@ package com.juandavyc.accounts.infrastructure.persistence.adapter;
 import com.juandavyc.accounts.domian.model.Account;
 import com.juandavyc.accounts.domian.model.enums.AccountStatus;
 import com.juandavyc.accounts.domian.port.AccountPort;
+import com.juandavyc.accounts.infrastructure.feign.dto.ClientRestResponse;
+import com.juandavyc.accounts.infrastructure.feign.service.ClientFeignAdapter;
 import com.juandavyc.accounts.infrastructure.persistence.entity.AccountEntity;
 import com.juandavyc.accounts.infrastructure.persistence.mapper.AccountPersistenceMapper;
 import com.juandavyc.accounts.infrastructure.persistence.repository.AccountRepository;
@@ -35,6 +37,14 @@ public class AccountRepositoryAdapter implements AccountPort {
     }
 
     @Override
+    public List<Account> findByClientId(UUID id) {
+        List<AccountEntity> entities = repository.findByClientId(id);
+        return entities.stream()
+                .map(mapper::toDomain)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<Account> findAll() {
         List<AccountEntity> entities = repository.findAll();
         return entities.stream()
@@ -49,7 +59,6 @@ public class AccountRepositoryAdapter implements AccountPort {
         if (optionalAccount.isPresent()) {
             AccountEntity entity = optionalAccount.get();
             entity.setStatus(AccountStatus.INACTIVE);
-
             repository.save(entity);
         }
 

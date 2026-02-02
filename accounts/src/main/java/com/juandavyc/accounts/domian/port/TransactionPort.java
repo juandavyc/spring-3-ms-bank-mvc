@@ -12,6 +12,8 @@ public interface TransactionPort {
 
     Optional<Transaction> findById(UUID accountId);
 
+    List<Transaction> findByAccountId(UUID accountId);
+
     List<Transaction> findAll();
 
 }

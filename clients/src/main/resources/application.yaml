@@ -24,5 +24,9 @@ spring:
 #        type:
 #          preferred_enum_jdbc_type: VARCHAR
 
+accounts-service:
+  ribbon:
+    listOfServers: localhost:8081
+
 server:
   port: 8082

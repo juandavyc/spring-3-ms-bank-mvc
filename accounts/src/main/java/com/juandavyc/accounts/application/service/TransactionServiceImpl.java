@@ -58,8 +58,11 @@ public class TransactionServiceImpl implements TransactionUseCase {
     }
 
     @Override
-    public TransactionResponse searchByClientId(UUID id) {
-        return null;
+    public List<TransactionResponse> findByAccountId(UUID id) {
+        List<Transaction> transactions = port.findByAccountId(id);
+        return transactions.stream()
+                .map(mapper::toResponse)
+                .toList();
     }
 
     @Override

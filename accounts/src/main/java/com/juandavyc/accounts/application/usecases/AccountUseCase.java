@@ -10,7 +10,8 @@ public interface AccountUseCase {
 
     AccountResponse create(AccountCommand command);
     AccountResponse searchById(UUID id);
-    AccountResponse searchByClientId(UUID id);
+
+    List<AccountResponse>  findByClientId(UUID id);
 
     List<AccountResponse> search();
 

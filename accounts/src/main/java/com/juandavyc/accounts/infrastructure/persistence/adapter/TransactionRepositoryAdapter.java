@@ -34,6 +34,14 @@ public class TransactionRepositoryAdapter implements TransactionPort {
     }
 
     @Override
+    public List<Transaction> findByAccountId(UUID accountId) {
+        List<TransactionEntity> transactions = repository.findByAccountId(accountId);
+        return transactions.stream()
+                .map(mapper::toDomain)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<Transaction> findAll() {
         List<TransactionEntity> transactions = repository.findAll();
         return transactions.stream()

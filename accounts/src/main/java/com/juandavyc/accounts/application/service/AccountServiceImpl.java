@@ -40,8 +40,11 @@ public class AccountServiceImpl implements AccountUseCase {
     }
 
     @Override
-    public AccountResponse searchByClientId(UUID id) {
-        return null;
+    public List<AccountResponse> findByClientId(UUID id) {
+        List<Account> accounts = port.findByClientId(id);
+        return accounts.stream()
+                .map(mapper::toResponse)
+                .toList();
     }
 
     @Override
