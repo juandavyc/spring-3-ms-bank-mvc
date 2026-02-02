@@ -1,6 +1,6 @@
 package com.juandavyc.accounts.infrastructure.rest.controller;
 
-import com.juandavyc.accounts.application.dto.ReportResponse;
+import com.juandavyc.accounts.application.dto.report.ReportResponse;
 import com.juandavyc.accounts.application.usecases.ReportUseCase;
 import com.juandavyc.accounts.infrastructure.rest.dto.ReportRestResponse;
 import com.juandavyc.accounts.infrastructure.rest.mapper.ReportRestMapper;

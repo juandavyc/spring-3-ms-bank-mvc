@@ -1,13 +1,14 @@
 package com.juandavyc.accounts.application.service;
 
-import com.juandavyc.accounts.application.dto.TransactionCommand;
-import com.juandavyc.accounts.application.dto.TransactionResponse;
+import com.juandavyc.accounts.application.dto.transaction.TransactionCommand;
+import com.juandavyc.accounts.application.dto.transaction.TransactionResponse;
 import com.juandavyc.accounts.application.mapper.TransactionApplicationMapper;
 import com.juandavyc.accounts.application.usecases.TransactionUseCase;
 import com.juandavyc.accounts.domian.model.Account;
 import com.juandavyc.accounts.domian.model.Transaction;
 import com.juandavyc.accounts.domian.port.AccountPort;
 import com.juandavyc.accounts.domian.port.TransactionPort;
+import com.juandavyc.core.exceptions.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -27,22 +28,21 @@ public class TransactionServiceImpl implements TransactionUseCase {
     @Override
     public TransactionResponse create(TransactionCommand command) {
 
-        Transaction transaction = mapper.toDomain(command);
-
         Account account = accountPort.findById(command.getAccountId())
-                .orElseThrow(() -> new RuntimeException("no cuenta existente"));
+                .orElseThrow(() ->new ResourceNotFoundException("Account", "id", command.getAccountId()));
 
+        Transaction transaction = mapper.toDomain(command);
         BigDecimal currentBalance = account.getBalance();
-
         transaction.initialize();
-
         BigDecimal newBalance = transaction.calculateNewBalance(currentBalance);
-
         transaction.evaluate(newBalance);
 
         if (transaction.isApproved()) {
             account.setBalance(newBalance);
             accountPort.save(account);
+        }
+        else{
+
         }
 
         Transaction saved = port.save(transaction);
@@ -53,7 +53,7 @@ public class TransactionServiceImpl implements TransactionUseCase {
     @Override
     public TransactionResponse searchById(UUID id) {
         Transaction transaction = port.findById(id)
-                .orElseThrow(() -> new RuntimeException("Transaction not found"));
+                .orElseThrow(() ->new ResourceNotFoundException("Transaction", "id", id));
         return mapper.toResponse(transaction);
     }
 
@@ -66,12 +66,11 @@ public class TransactionServiceImpl implements TransactionUseCase {
     }
 
     @Override
-    public List<TransactionResponse> search() {
+    public List<TransactionResponse> findAll() {
         List<Transaction> transactions = port.findAll();
         return transactions.stream()
                 .map(mapper::toResponse)
                 .toList();
     }
 
-    // utility
 }

@@ -1,17 +1,16 @@
 package com.juandavyc.core.shared;
 
-public enum ClientResponseCode implements ResponseCode{
+public enum AccountResponseCode implements ResponseCode{
 
-    CREATED(201, "Cliente creado correctamente"),
-    NOT_FOUND(404, "Cliente no encontrada"),
+    CREATED(201, "Cuenta creada correctamente"),
+    NOT_FOUND(404, "Cuenta no encontrada"),
     SUCCESS(200, "Solicitud procesada exitosamente"),
-    DELETED(200, "Cliente eliminado correctamente");
-
+    DELETED(200, "Cuenta eliminada correctamente");;
 
     private final int value;
     private final String message;
 
-    ClientResponseCode(int value, String message) {
+    AccountResponseCode(int value, String message) {
         this.value = value;
         this.message = message;
     }

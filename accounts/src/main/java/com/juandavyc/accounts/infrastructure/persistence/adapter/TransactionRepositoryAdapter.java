@@ -8,6 +8,7 @@ import com.juandavyc.accounts.infrastructure.persistence.repository.TransactionR
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -36,6 +37,19 @@ public class TransactionRepositoryAdapter implements TransactionPort {
     @Override
     public List<Transaction> findByAccountId(UUID accountId) {
         List<TransactionEntity> transactions = repository.findByAccountId(accountId);
+        return transactions.stream()
+                .map(mapper::toDomain)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Transaction> findByAccountIdAndTimestampBetween(UUID accountId, LocalDateTime start, LocalDateTime end) {
+
+        List<TransactionEntity> transactions = repository.findByAccountIdAndTimestampBetween(
+                accountId,
+                start,
+                end
+        );
         return transactions.stream()
                 .map(mapper::toDomain)
                 .collect(Collectors.toList());

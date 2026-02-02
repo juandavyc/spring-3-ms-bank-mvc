@@ -29,7 +29,6 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/clients")
 @RequiredArgsConstructor
-@Validated
 public class ClientController {
 
     private final ClientUseCase service;
@@ -105,8 +104,8 @@ public class ClientController {
         service.deleteById(id);
 
         return ResponseEntity
-                .status(ClientResponseCode.SUCCESS.getValue())
-                .body(ResponseMapper.response(ClientResponseCode.SUCCESS, Map.of("isDeleted", true)));
+                .status(ClientResponseCode.DELETED.getValue())
+                .body(ResponseMapper.response(ClientResponseCode.DELETED, Map.of("isDeleted", true)));
 
     }
 }

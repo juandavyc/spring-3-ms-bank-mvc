@@ -2,6 +2,7 @@ package com.juandavyc.accounts.domian.port;
 
 import com.juandavyc.accounts.domian.model.Transaction;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -13,6 +14,14 @@ public interface TransactionPort {
     Optional<Transaction> findById(UUID accountId);
 
     List<Transaction> findByAccountId(UUID accountId);
+
+    List<Transaction> findByAccountIdAndTimestampBetween(
+            UUID accountId,
+            LocalDateTime start,
+            LocalDateTime end
+    );
+
+
 
     List<Transaction> findAll();
 

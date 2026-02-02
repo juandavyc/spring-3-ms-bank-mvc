@@ -1,11 +1,10 @@
 package com.juandavyc.accounts.application.usecases;
 
-import com.juandavyc.accounts.application.dto.ClientResponse;
+import com.juandavyc.core.dto.application.ClientResponse;
 
-import java.util.Optional;
 import java.util.UUID;
 
 public interface ClientPort {
-    ClientResponse getClientById(UUID clientId);
+    void getClientById(UUID clientId);
     ClientResponse getClientByIdForReport(UUID clientId);
 }

@@ -2,6 +2,7 @@ package com.juandavyc.accounts.infrastructure.persistence.adapter;
 
 import com.juandavyc.accounts.domian.model.Account;
 import com.juandavyc.accounts.domian.model.enums.AccountStatus;
+import com.juandavyc.accounts.domian.model.enums.AccountType;
 import com.juandavyc.accounts.domian.port.AccountPort;
 import com.juandavyc.accounts.infrastructure.feign.dto.ClientRestResponse;
 import com.juandavyc.accounts.infrastructure.feign.service.ClientFeignAdapter;
@@ -34,6 +35,11 @@ public class AccountRepositoryAdapter implements AccountPort {
     public Optional<Account> findById(UUID id) {
         Optional<AccountEntity> entity = repository.findById(id);
         return entity.map(mapper::toDomain);
+    }
+
+    @Override
+    public boolean existsByClientIdAndType(UUID clientId, AccountType type) {
+        return repository.existsByClientIdAndType(clientId, type);
     }
 
     @Override

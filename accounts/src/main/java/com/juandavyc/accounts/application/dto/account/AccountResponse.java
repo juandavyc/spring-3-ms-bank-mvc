@@ -1,17 +1,21 @@
-package com.juandavyc.accounts.application.dto;
+package com.juandavyc.accounts.application.dto.account;
+
+
 import com.juandavyc.accounts.domian.model.enums.AccountStatus;
 import com.juandavyc.accounts.domian.model.enums.AccountType;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-
-public class AccountCommand {
+@ToString
+public class AccountResponse {
 
     private UUID id;
     private String number;

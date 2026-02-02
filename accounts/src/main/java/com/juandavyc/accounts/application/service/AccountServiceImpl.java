@@ -1,12 +1,15 @@
 package com.juandavyc.accounts.application.service;
 
-import com.juandavyc.accounts.application.dto.AccountCommand;
-import com.juandavyc.accounts.application.dto.AccountResponse;
+import com.juandavyc.accounts.application.dto.account.AccountCommand;
+import com.juandavyc.accounts.application.dto.account.AccountResponse;
 import com.juandavyc.accounts.application.mapper.AccountApplicationMapper;
-import com.juandavyc.accounts.application.mapper.AccountApplicationUpdateMapper;
 import com.juandavyc.accounts.application.usecases.AccountUseCase;
+import com.juandavyc.accounts.application.usecases.ClientPort;
 import com.juandavyc.accounts.domian.model.Account;
+import com.juandavyc.accounts.domian.model.enums.AccountStatus;
 import com.juandavyc.accounts.domian.port.AccountPort;
+import com.juandavyc.core.exceptions.AccountTypeAlreadyExistsException;
+import com.juandavyc.core.exceptions.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,56 +22,48 @@ public class AccountServiceImpl implements AccountUseCase {
 
     private final AccountPort port;
     private final AccountApplicationMapper mapper;
-    private final AccountApplicationUpdateMapper mapperUpdate;
+
+    private final ClientPort clientPort;
 
     @Override
     public AccountResponse create(AccountCommand command) {
+
+        clientPort.getClientById(command.getClientId());
+
+        boolean existsByClientIdAndType = port.existsByClientIdAndType(command.getClientId(), command.getType());
+
+        if (existsByClientIdAndType){
+            throw new AccountTypeAlreadyExistsException(command.getType().toString());
+        }
+
         Account account = mapper.toDomain(command);
-        // exists verify
-        // throws
-        // account. createdAt
         account.initialize();
         Account saved = port.save(account);
         return mapper.toResponse(saved);
+
     }
 
     @Override
-    public AccountResponse searchById(UUID id) {
+    public AccountResponse findById(UUID id) {
         Account account = port.findById(id)
-                .orElseThrow(() -> new RuntimeException("Account not found"));
+                .orElseThrow(() ->new ResourceNotFoundException("Account", "id", id));
         return mapper.toResponse(account);
     }
 
     @Override
-    public List<AccountResponse> findByClientId(UUID id) {
-        List<Account> accounts = port.findByClientId(id);
-        return accounts.stream()
-                .map(mapper::toResponse)
-                .toList();
-    }
-
-    @Override
-    public List<AccountResponse> search() {
+    public List<AccountResponse> findAll() {
         List<Account> accounts = port.findAll();
         return accounts.stream()
                 .map(mapper::toResponse)
                 .toList();
     }
 
-    @Override
-    public AccountResponse update(UUID id, AccountCommand command) {
-        Account account = port.findById(id)
-                .orElseThrow(() -> new RuntimeException("Account not found"));
-        // mapper
-        mapperUpdate.updateFromCommand(command, account);
-        Account saved = port.save(account);
-        return mapper.toResponse(saved);
-    }
 
     @Override
     public void delete(UUID id) {
         Account account = port.findById(id)
-                .orElseThrow(() -> new RuntimeException("Account not found"));
+                .orElseThrow(() ->new ResourceNotFoundException("Account", "id", id));
+        account.setStatus(AccountStatus.INACTIVE);
         port.deleteById(id);
     }
 }

@@ -1,10 +1,15 @@
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/dto/Product.java
+/home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/dto/application/ClientResponse.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/dto/response/ErrorResponseDto.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/dto/response/ResponseDto.java
+/home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/exceptions/AccountTypeAlreadyExistsException.java
+/home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/exceptions/ClientServiceUnavailableException.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/exceptions/IdentificationAlreadyExistsException.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/exceptions/PhoneNumberAlreadyExistsException.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/exceptions/ResourceNotFoundException.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/mapper/ResponseMapper.java
+/home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/shared/AccountResponseCode.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/shared/ClientResponseCode.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/shared/ResponseCode.java
+/home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/shared/TransactionResponseCode.java
 /home/juan/Escritorio/interviews/devsu/core/src/main/java/com/juandavyc/core/validation/ValidationGroup.java

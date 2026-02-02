@@ -1,7 +1,7 @@
 package com.juandavyc.accounts.application.usecases;
 
-import com.juandavyc.accounts.application.dto.TransactionCommand;
-import com.juandavyc.accounts.application.dto.TransactionResponse;
+import com.juandavyc.accounts.application.dto.transaction.TransactionCommand;
+import com.juandavyc.accounts.application.dto.transaction.TransactionResponse;
 
 import java.util.List;
 import java.util.UUID;
@@ -13,7 +13,7 @@ public interface TransactionUseCase {
     TransactionResponse searchById(UUID id);
     List<TransactionResponse> findByAccountId(UUID id);
 
-    List<TransactionResponse> search();
+    List<TransactionResponse> findAll();
 
 
 }

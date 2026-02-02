@@ -1,4 +1,4 @@
-package com.juandavyc.accounts.application.dto;
+package com.juandavyc.accounts.application.dto.report;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,10 +1,12 @@
 package com.juandavyc.accounts.application.service;
 
-import com.juandavyc.accounts.application.dto.AccountSummaryResponse;
-import com.juandavyc.accounts.application.dto.AccountTransactionResponse;
-import com.juandavyc.accounts.application.dto.ClientResponse;
-import com.juandavyc.accounts.application.dto.ReportResponse;
-import com.juandavyc.accounts.application.dto.TransactionResponse;
+import com.juandavyc.accounts.application.dto.report.AccountSummaryResponse;
+import com.juandavyc.accounts.application.dto.report.AccountTransactionsResponse;
+import com.juandavyc.accounts.application.dto.report.ReportMetadataResponse;
+import com.juandavyc.accounts.application.dto.report.ReportResponse;
+import com.juandavyc.accounts.application.dto.report.ReportSummaryResponse;
+import com.juandavyc.accounts.application.dto.transaction.TransactionResponse;
+import com.juandavyc.accounts.application.mapper.ClientApplicationMapper;
 import com.juandavyc.accounts.application.mapper.TransactionApplicationMapper;
 import com.juandavyc.accounts.application.usecases.ClientPort;
 import com.juandavyc.accounts.application.usecases.ReportUseCase;
@@ -14,13 +16,17 @@ import com.juandavyc.accounts.domian.model.enums.TransactionStatus;
 import com.juandavyc.accounts.domian.model.enums.TransactionType;
 import com.juandavyc.accounts.domian.port.AccountPort;
 import com.juandavyc.accounts.domian.port.TransactionPort;
+import com.juandavyc.core.dto.application.ClientResponse;
+import com.juandavyc.core.exceptions.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -32,88 +38,81 @@ public class ReportUseCaseImpl implements ReportUseCase {
     private final AccountPort accountPort;
     private final TransactionPort transactionPort;
 
+    private final ClientApplicationMapper clientMapper;
     private final TransactionApplicationMapper transactionMapper;
 
     @Override
     public ReportResponse execute(LocalDate startDate, LocalDate endDate, UUID clientId) {
-        ReportResponse reportResponse = new ReportResponse();
+
         ClientResponse client = clientPort.getClientByIdForReport(clientId);
-//        if (client == null) {
-//            throw new ClientNotFoundException("Client not found with id: " + clientId);
-//        }
-        // cambiar por el d fechas
 
-        ReportResponse.ReportMetadata metadata = reportMetadata(
-                startDate, endDate
-        );
-        ReportResponse.ReportSummary summary = new ReportResponse.ReportSummary();
+        if (Objects.isNull(client)) {
+            throw new ResourceNotFoundException("Client", "id", clientId);
+        }
 
+        LocalDateTime startDateTime = startDate.atStartOfDay();
+        LocalDateTime endDateTime = endDate.atTime(LocalTime.MAX);
+
+        ReportResponse reportResponse = new ReportResponse();
+        ReportMetadataResponse metadata = reportMetadata(startDateTime, endDateTime);
+
+        ReportSummaryResponse summary = new ReportSummaryResponse();
 
         List<Account> accounts = accountPort.findByClientId(clientId);
 
         summary.setTotalAccounts(accounts.size());
 
-        List<AccountTransactionResponse> accountTransactionResponses = accounts.stream()
+        List<AccountTransactionsResponse> accountTransactionResponses = accounts.stream()
                 .map(account -> {
 
-                    AccountTransactionResponse atr = processAccountForReport(account, startDate, endDate);
+                    AccountTransactionsResponse atr =
+                            processAccountForReport(account, startDateTime, endDateTime);
 
-                    summary.setTotalTransactions(summary.getTotalTransactions() + atr.getSummary().getTotalTransactions());
-                    summary.setTotalApprovedTransactions(summary.getTotalApprovedTransactions() + atr.getSummary().getTotalApproved());
-                    summary.setTotalRejectedTransactions(summary.getTotalRejectedTransactions() + atr.getSummary().getTotalRejected());
-                    //summary.setTotalBalance(summary.getTotalBalance().add(atr.getBalance()));
+                    int total = summary.getTotalTransactions() + atr.getSummary().getTotalTransactions();
+                    int totalApproved = summary.getTotalApprovedTransactions() + atr.getSummary().getTotalApproved();
+                    int totalRejected = summary.getTotalRejectedTransactions() + atr.getSummary().getTotalRejected();
+
+                    summary.setTotalTransactions(total);
+                    summary.setTotalApprovedTransactions(totalApproved);
+                    summary.setTotalRejectedTransactions(totalRejected);
 
                     return atr;
                 })
                 .toList();
 
 
-
-
         reportResponse.setMetadata(metadata);
-        reportResponse.setClient(client);
-        reportResponse.setAccountTransactions(accountTransactionResponses);
-        reportResponse.setReportSummary(summary);
-
-
+        reportResponse.setClient(clientMapper.toResponse(client));
+        reportResponse.setAccounts(accountTransactionResponses);
+        reportResponse.setSummary(summary);
 
 
         return reportResponse;
     }
 
-    private ReportResponse.ReportMetadata reportMetadata(LocalDate startDate, LocalDate endDate){
-         ReportResponse.ReportMetadata rep = new ReportResponse.ReportMetadata();
-        rep.setStartDate(startDate);
-        rep.setEndDate(endDate);
-        rep.setGeneratedAt(LocalDateTime.now());
-
-                return rep;
+    private ReportMetadataResponse reportMetadata(LocalDateTime startDate, LocalDateTime endDate) {
+        return new ReportMetadataResponse(startDate, endDate, LocalDateTime.now());
     }
 
-    private AccountTransactionResponse processAccountForReport(
-            Account account, LocalDate startDate, LocalDate endDate) {
-        //log.debug("Processing account {} for report", account.getId());
+    private AccountTransactionsResponse processAccountForReport(
+            Account account, LocalDateTime startDate, LocalDateTime endDate) {
 
-        //startDate, endDate
         List<Transaction> transactions = transactionPort
-                .findByAccountId(account.getId());
-
+                .findByAccountIdAndTimestampBetween(account.getId(), startDate, endDate);
 
         List<TransactionResponse> transactionResponses =
                 transactionMapper.toResponseList(transactions);
 
         AccountSummaryResponse summaryResponse = calculateAccountMetrics(transactions);
 
-        return AccountTransactionResponse.builder()
+        return AccountTransactionsResponse.builder()
                 .id(account.getId())
                 .number(account.getNumber())
                 .type(account.getType())
                 .status(account.getStatus())
-                //.currentBalance(account.getBalance())
-                //.closingBalance(account.getBalance()) // Para reporte pasivo podría ser igual
-                .transactions(transactionResponses)   // Del mapper
+                .balance(account.getBalance())
+                .transactions(transactionResponses)
                 .summary(summaryResponse)
-                // .metrics(accountMetrics)              // De lógica de negocio
                 .build();
     }
 
@@ -149,42 +148,5 @@ public class ReportUseCaseImpl implements ReportUseCase {
                 .build();
     }
 
-//    @Override
-//    public AccountSummaryResponse execute(List<Transaction> transactions) {
-//
-//        AccountSummaryResponse summary = new AccountSummaryResponse();
-//
-//        Integer approved = 0;
-//        Integer totalTransactions = 10;
-//        BigDecimal totalDeposits  = BigDecimal.ZERO;
-//        BigDecimal totalWithdrawals  = BigDecimal.valueOf(10L);
-//
-//        summary.setTotalApproved(approved);
-//        summary.setTotalTransactions(totalTransactions);
-//        summary.setTotalDeposits(totalDeposits);
-//        summary.setTotalWithdrawals(totalWithdrawals);
-//
-//        return summary;
-//    }
-//    AccountSummaryRestResponse summary = new AccountSummaryRestResponse();
-//
-//    List<TransactionResponse> approved = transactions.stream()
-//            .filter(tx -> tx.getStatus() == TransactionStatus.APPROVED)
-//            .toList();
-//
-//        summary.setTotalTransactions(approved.size());
-//
-//    BigDecimal deposits = approved.stream()
-//            .filter(tx -> tx.getType() == TransactionType.DEPOSIT)
-//            .map(TransactionResponse::getAmount)
-//            .reduce(BigDecimal.ZERO, BigDecimal::add);
-//
-//    BigDecimal withdrawals = approved.stream()
-//            .filter(tx -> tx.getType() == TransactionType.WITHDRAWAL)
-//            .map(TransactionResponse::getAmount)
-//            .reduce(BigDecimal.ZERO, BigDecimal::add);
-//
-//        summary.setTotalDeposits(deposits);
-//        summary.setTotalWithdrawals(withdrawals);
 
 }

@@ -1,4 +1,4 @@
-package com.juandavyc.accounts.application.dto;
+package com.juandavyc.accounts.application.dto.transaction;
 
 import com.juandavyc.accounts.domian.model.enums.TransactionStatus;
 import com.juandavyc.accounts.domian.model.enums.TransactionType;
@@ -23,6 +23,5 @@ public class TransactionResponse {
     private BigDecimal amount;
     private TransactionStatus status;
     private LocalDateTime timestamp;
-
 
 }
