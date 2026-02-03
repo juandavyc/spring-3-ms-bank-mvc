@@ -3,12 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>accounts</artifactId>
-	<version>${revision}</version>
-
 	<parent>
 		<groupId>com.juandavyc</groupId>
 		<artifactId>devsu-bank-spring-boot</artifactId>
-		<version>${revision}</version>
+		<version>1.0.0</version>
 	</parent>
 	<name>accounts</name>
 	<description>accounts ms for devsu bank</description>
@@ -117,6 +115,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>com.intuit.karate</groupId>
+			<artifactId>karate-junit5</artifactId>
+			<version>1.4.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -137,6 +141,17 @@
 	</dependencyManagement>
 
 	<build>
+		<testResources>
+			<testResource>
+				<directory>src/test/java</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

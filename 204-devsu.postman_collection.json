@@ -1,0 +1,354 @@
+{
+  "info": {
+    "_postman_id": "ae40b008-5118-4338-b53b-7b423924824c",
+    "name": "204-devsu",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18409336"
+  },
+  "item": [
+    {
+      "name": "account-ms",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"openingBalance\": 123,\n  \"type\": \"CREDIT\",\n  \"clientId\": \"uuid-de-clients-create -> data->id\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/accounts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/accounts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-by-id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/accounts/d024607e-bfbb-45f7-ada8-f6c33702c9f7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "accounts",
+                "d024607e-bfbb-45f7-ada8-f6c33702c9f7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete-by-id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/accounts/d024607e-bfbb-45f7-ada8-f6c33702c9f7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "accounts",
+                "d024607e-bfbb-45f7-ada8-f6c33702c9f7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "transaction-ms",
+      "item": [
+        {
+          "name": "deposit",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountId\": \"d024607e-bfbb-45f7-ada8-f6c33702c9f7\",\n  \"type\": \"DEPOSIT\",\n  \"amount\": 120\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/transactions",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "withdrawal - retirar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accountId\": \"d024607e-bfbb-45f7-ada8-f6c33702c9f7\",\n  \"type\": \"WITHDRAWAL\",\n  \"amount\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/transactions",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/transactions",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "transactions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "clients-ms",
+      "item": [
+        {
+          "name": "all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/clients",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "clients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "by-id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/clients/e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "clients",
+                "e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "by-id-{body}",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phoneNumber\": \"555-22223\",\n    \"password\": \"123123123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/clients/e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "clients",
+                "e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"fullName\": \"David Cifuentes\",\n    \"gender\": \"MALE\",\n    \"age\": 24,\n    \"identification\": \"1232212\",\n    \"address\": \"Bogtota DC 12-12 123 \",\n    \"phoneNumber\": \"555-11121\",\n    \"password\": \"233415456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/clients",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "clients"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "by-id --soft",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/clients/e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "clients",
+                "e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "report",
+      "item": [
+        {
+          "name": "generate",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/reports?startDate=2024-01-01&endDate=2024-01-06&clientId=e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2024-01-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-01-06"
+                },
+                {
+                  "key": "clientId",
+                  "value": "e3f1c9c3-4b2a-4f8b-9b6d-1a2e3f4b5c6d"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

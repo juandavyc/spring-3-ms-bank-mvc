@@ -15,15 +15,19 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
         format_sql: true
         ddl-auto: none
+    defer-datasource-initialization: true
   #        type:
   #          preferred_enum_jdbc_type: VARCHAR
 
+  sql:
+    init:
+      data-locations: classpath:static/data.sql
 
   cloud:
     openfeign:
@@ -51,9 +55,8 @@ resilience4j:
           - feign.FeignException.BadRequest
           - feign.FeignException.NotFound
 
-clients-service:
-  ribbon:
-    listOfServers: localhost:8082
+external-services:
+  clients-url: ${CLIENTS_SERVICE_URL:http://localhost:8082}
 
 server:
   port: 8081

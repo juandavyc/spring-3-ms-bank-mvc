@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.UUID;
 
-@FeignClient(name = "clients", url = "http://localhost:8082")
-public interface ClientFeign {
+@FeignClient(name = "clients", url = "${external-services.clients-url}")
 
+public interface ClientFeign {
 
     @GetMapping("/api/clients/{id}")
     ResponseDto<ClientRestResponse> getById(@PathVariable("id") UUID id);

@@ -14,19 +14,20 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
         format_sql: true
         ddl-auto: none
+    defer-datasource-initialization: true
 
+  sql:
+    init:
+      data-locations: classpath:static/data.sql
 #        type:
 #          preferred_enum_jdbc_type: VARCHAR
 
-accounts-service:
-  ribbon:
-    listOfServers: localhost:8081
 
 server:
   port: 8082
