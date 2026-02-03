@@ -3,12 +3,20 @@
 ##  Información General
 Este proyecto consiste en una solución bancaria desarrollada con microservicios utilizando:
 
+Este proyecto consiste en una solución bancaria desarrollada con microservicios utilizando:
+
 - **Maven** como gestor de dependencias.
 - **Java 21** como lenguaje principal.
 - **Spring MVC** para la capa web y controladores.
 - **Feign Client** para la comunicación entre microservicios.
 - **Circuit Breaker** para resiliencia en llamadas remotas.
+- **Cache** para optimizar consultas frecuentes.
 - Arquitectura basada en **dos microservicios**:
+  - `accounts`
+  - `clients`
+- Arquitectura **Hexagonal**, promoviendo separación de responsabilidades y testabilidad.
+- Pruebas **unitarias** y **end-to-end (E2E)** con Karate.
+- 
     - `accounts`
     - `clients`
 ---

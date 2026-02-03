@@ -5,82 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28ff4172-c58b-4cb8-8412-72c5c6cc8f34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/resources/static/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/karate/accounts/AccountsRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/karate/accounts/accounts.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/karate-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/test/java/logback-test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/static/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/clients/ClientsRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/clients/clients.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/test/java/karate-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/src/test/java/logback-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/ClientFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/juandavyc/accounts/infrastructure/feign/ClientFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/BaseDatos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/controller/AccountControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/test/java/com/juandavyc/accounts/controller/AccountControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/ClientsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/ClientsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/dto/ClientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/dto/ClientCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/dto/ClientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/dto/ClientResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/mapper/ClientApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/mapper/ClientApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/mapper/ClientApplicationUpdateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/mapper/ClientApplicationUpdateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/service/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/service/ClientServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/usecases/ClientUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/usecases/ClientUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/application/usecases/PasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/application/usecases/PasswordHasher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/domain/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/domain/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/enums/ClientStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/domain/model/enums/ClientStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/model/enums/GenderType.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/domain/model/enums/GenderType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/domain/port/ClientPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/domain/port/ClientPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/config/PasswordConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/config/PasswordConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/adapter/ClientRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/persistence/adapter/ClientRepositoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/entity/ClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/persistence/entity/ClientEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/entity/PersonEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/persistence/entity/PersonEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/mapper/ClientPersistenceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/persistence/mapper/ClientPersistenceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/persistence/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/persistence/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/advice/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/rest/advice/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/rest/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/dto/ClientRestRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/rest/dto/ClientRestRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/dto/ClientRestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/rest/dto/ClientRestResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/rest/mapper/ClientRestMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/rest/mapper/ClientRestMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/juandayvc/clients/infrastructure/security/BCryptPasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/juandavyc/clients/infrastructure/security/BCryptPasswordHasher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/resources/BaseDatos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/ClientsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/ClientsApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/adapter/ClientAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/adapter/ClientAdapterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/controller/ClientControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/controller/helper/ClientRequestHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/controller/helper/ClientRequestHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/src/test/java/com/juandayvc/clients/service/ClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/test/java/com/juandavyc/clients/service/ClientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/application/ClientResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/response/ErrorResponseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/dto/response/ResponseDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/AccountTypeAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/ClientServiceUnavailableException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/IdentificationAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/PhoneNumberAlreadyExistsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/exceptions/ResourceNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/mapper/ResponseMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/AccountResponseCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/ClientResponseCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/ResponseCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/shared/TransactionResponseCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/validation/ValidationGroup$OnCreate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/validation/ValidationGroup$OnUpdate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/com/juandavyc/core/validation/ValidationGroup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/core-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devsu.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +142,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1770078072580</updated>
-      <workItem from="1770078075328" duration="5675000" />
+      <workItem from="1770078075328" duration="6004000" />
     </task>
     <servers />
   </component>
